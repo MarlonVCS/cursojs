@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Nacionalidade</title>
+</head>
+<body>
+    <h1>Validação de Nacionalidade</h1>
+    Você nasceu em que país? <input type="text" name="txtpa" id="txtpa">
+    <input type="button" value="Validar" onclick="Valida()">
+    <div id="res">
+
+    </div>
+    <script>
+        function Valida() {
+            var pais = (window.document.querySelector('input#txtpa')).value
+            var res = window.document.querySelector('div#res')
+
+            if (pais == `brasil`) {
+                res.innerHTML = `<p>Você nasceu no ${pais}, então você é <strong>Brasileiro</strong>!</p>`
+            }else{
+                res.innerHTML = `<p>Você nasceu no ${pais}, então você é <strong>Estrangeiro</strong>!`
+            }
+        }
+    </script>
+
+</body>
+</html>
